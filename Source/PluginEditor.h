@@ -6,6 +6,7 @@
 
 #include "PluginProcessor.h"
 
+#include <juce_audio_utils/juce_audio_utils.h>
 
 class FMSynthEditor : public juce::AudioProcessorEditor {
 public:
@@ -22,6 +23,9 @@ private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
     FMSynthProcessor &processorRef;
+
+    juce::MidiKeyboardState mKeyboardState;
+    juce::MidiKeyboardComponent mKeyboardComponent;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(FMSynthEditor)
 };
