@@ -4,22 +4,19 @@
 
 #include "PluginEditor.h"
 
-PluginEditor::PluginEditor (PluginProcessor& p)
-    : AudioProcessorEditor (&p), processorRef (p)
-{
-    juce::ignoreUnused (processorRef);
+FMSynthEditor::FMSynthEditor(FMSynthProcessor &p)
+    : AudioProcessorEditor(&p), processorRef(p) {
+    juce::ignoreUnused(processorRef);
 
-    setSize (400, 300);
+    setSize(400, 300);
 }
 
-PluginEditor::~PluginEditor() = default;
+FMSynthEditor::~FMSynthEditor() = default;
 
-void PluginEditor::paint (juce::Graphics& g)
-{
+void FMSynthEditor::paint(juce::Graphics &g) {
     // (Our component is opaque, so we must completely fill the background with a solid colour)
     g.fillAll(getLookAndFeel().findColour(juce::ResizableWindow::backgroundColourId));
 }
 
-void PluginEditor::resized()
-{
+void FMSynthEditor::resized() {
 }
