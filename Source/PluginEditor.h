@@ -8,7 +8,8 @@
 
 #include <juce_audio_utils/juce_audio_utils.h>
 
-class FMSynthEditor : public juce::AudioProcessorEditor {
+class FMSynthEditor : public juce::AudioProcessorEditor,
+                      public juce::MidiKeyboardState::Listener {
 public:
     explicit FMSynthEditor(FMSynthProcessor &);
 

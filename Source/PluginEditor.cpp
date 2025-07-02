@@ -11,6 +11,8 @@ FMSynthEditor::FMSynthEditor(FMSynthProcessor &p)
       ) {
     juce::ignoreUnused(processorRef);
 
+    mKeyboardState.addListener(this);
+
     addAndMakeVisible(mKeyboardComponent);
 
     setSize(1000, 600);
