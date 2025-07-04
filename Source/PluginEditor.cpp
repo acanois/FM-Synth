@@ -32,3 +32,20 @@ void FMSynthEditor::paint(juce::Graphics &g) {
 
 void FMSynthEditor::resized() {
 }
+
+void FMSynthEditor::handleNoteOn(
+    juce::MidiKeyboardState *source,
+    int midiChannel,
+    int midiNoteNumber,
+    float velocity
+) {
+    // DBG("FMSynthEditor::handleNoteOn - midi note: " << midiNoteNumber);
+}
+
+void FMSynthEditor::handleNoteOff(
+    juce::MidiKeyboardState *source,
+    int midiChannel,
+    int midiNoteNumber,
+    float velocity
+) {
+}

@@ -20,6 +20,21 @@ public:
 
     void resized() override;
 
+    // juce::MidiKeyboardState::Listener
+    void handleNoteOn(
+        juce::MidiKeyboardState *source,
+        int midiChannel,
+        int midiNoteNumber,
+        float velocity
+    ) override;
+
+    void handleNoteOff(
+        juce::MidiKeyboardState *source,
+        int midiChannel,
+        int midiNoteNumber,
+        float velocity
+    ) override;
+
 private:
     // This reference is provided as a quick way for your editor to
     // access the processor object that created it.
